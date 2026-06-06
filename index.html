@@ -1,88 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .container {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-            padding: 40px;
-            max-width: 600px;
-            text-align: center;
-        }
-
-        h1 {
-            color: #333;
-            margin-bottom: 20px;
-            font-size: 2.5em;
-        }
-
-        p {
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 30px;
-            font-size: 1.1em;
-        }
-
-        .button-group {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        a {
-            display: inline-block;
-            padding: 12px 30px;
-            background: #667eea;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s ease;
-            font-weight: 600;
-        }
-
-        a:hover {
-            background: #764ba2;
-        }
-
-        .secondary {
-            background: #e0e0e0;
-            color: #333;
-        }
-
-        .secondary:hover {
-            background: #d0d0d0;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chalq Privacy Policy</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: #1a1a1a;
+      background: #fff;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 24px;
+      line-height: 1.7;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+      color: #F5A623;
+      margin-bottom: 8px;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .updated {
+      font-size: 13px;
+      color: #999;
+      margin-bottom: 40px;
+    }
+    h2 {
+      font-size: 17px;
+      font-weight: 700;
+      margin-top: 36px;
+      margin-bottom: 10px;
+      color: #1a1a1a;
+    }
+    p { margin-bottom: 14px; font-size: 15px; color: #444; }
+    ul {
+      margin: 0 0 14px 20px;
+      font-size: 15px;
+      color: #444;
+    }
+    li { margin-bottom: 6px; }
+    a { color: #F5A623; text-decoration: none; }
+    .footer {
+      margin-top: 56px;
+      padding-top: 24px;
+      border-top: 1px solid #eee;
+      font-size: 13px;
+      color: #999;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to chalq-privacy</h1>
-        <p>This is your project homepage. You can customize this page to showcase your project and provide information to visitors.</p>
-        <div class="button-group">
-            <a href="https://github.com/CodeWithPhyl/chalq-privacy">View on GitHub</a>
-            <a href="#" class="secondary">Learn More</a>
-        </div>
-    </div>
+
+  <div class="logo">Chalq</div>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: June 2026</p>
+
+  <p>
+    Chalq is a classroom announcement app developed independently by CodeWithPhyl.
+    This policy explains what information we collect, how we use it, and who we share it with.
+  </p>
+
+  <h2>1. Information We Collect</h2>
+  <p>We collect the following information depending on your role:</p>
+  <ul>
+    <li><strong>Teachers:</strong> Full name, email address, and a hashed (non-reversible) password.</li>
+    <li><strong>Students:</strong> Device ID and push notification token. No name or email is collected from students.</li>
+    <li><strong>Usage data:</strong> Which announcements have been read, and class membership records.</li>
+  </ul>
+
+  <h2>2. How We Use Your Information</h2>
+  <ul>
+    <li>To authenticate teachers and manage their accounts.</li>
+    <li>To deliver class announcements to enrolled students.</li>
+    <li>To send push notifications when new announcements are posted.</li>
+    <li>To automatically categorize announcements using AI (title and message text only).</li>
+  </ul>
+
+  <h2>3. Third-Party Services</h2>
+  <p>Chalq uses the following third-party services:</p>
+  <ul>
+    <li><strong>Supabase</strong> — database and backend hosting. Stores teacher accounts, class data, and announcements.</li>
+    <li><strong>Resend</strong> — email delivery. Receives teacher email address and OTP code for verification.</li>
+    <li><strong>Expo Push Notifications</strong> — push notification delivery. Receives device push tokens and notification content.</li>
+    <li><strong>HiveMQ</strong> — real-time messaging. Receives announcement content in transit via MQTT protocol.</li>
+    <li><strong>Groq</strong> — AI classification. Receives announcement title and message text to automatically assign a category. No data is stored by Groq.</li>
+  </ul>
+
+  <h2>4. Data Retention</h2>
+  <ul>
+    <li>Announcements expire automatically after 7 days.</li>
+    <li>Teacher accounts and class data are retained until manually deleted.</li>
+    <li>Students can leave a class at any time, which removes their device ID and push token from our records.</li>
+  </ul>
+
+  <h2>5. Children's Privacy</h2>
+  <p>
+    Chalq is intended for use in educational settings under teacher supervision.
+    The app is designed for users aged 13 and above. We do not knowingly collect
+    personal information from children under 13. If you believe a child under 13
+    has used the app, please contact us so we can remove their data.
+  </p>
+
+  <h2>6. Data Security</h2>
+  <p>
+    Passwords are hashed before storage and never stored in plain text.
+    Student data is limited to device identifiers only — no names or emails are collected from students.
+    All data is transmitted over encrypted connections (HTTPS/WSS).
+  </p>
+
+  <h2>7. Your Rights</h2>
+  <p>You may request deletion of your data at any time by contacting us. Teachers can delete their class data directly within the app. Students can leave a class to remove their records.</p>
+
+  <h2>8. Changes to This Policy</h2>
+  <p>We may update this policy from time to time. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+
+  <h2>9. Contact</h2>
+  <p>
+    If you have any questions about this privacy policy, contact us at:<br />
+    <a href="mailto:acostacharles34@gmail.com">codewithphyl@gmail.com</a>
+  </p>
+
+  <div class="footer">
+    &copy; 2026 CodeWithPhyl. All rights reserved.
+  </div>
+
 </body>
 </html>

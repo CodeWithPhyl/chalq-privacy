@@ -69,7 +69,7 @@
   <h2>1. Information We Collect</h2>
   <p>We collect the following information depending on your role:</p>
   <ul>
-    <li><strong>Teachers:</strong> Full name, email address, and a hashed (non-reversible) password.</li>
+    <li><strong>Teachers:</strong> Full name and email address, used for authentication.</li>
     <li><strong>Students:</strong> Device ID and push notification token. No name or email is collected from students.</li>
     <li><strong>Usage data:</strong> Which announcements have been read, and class membership records.</li>
   </ul>
@@ -85,8 +85,7 @@
   <h2>3. Third-Party Services</h2>
   <p>Chalq uses the following third-party services:</p>
   <ul>
-    <li><strong>Supabase</strong> — database and backend hosting. Stores teacher accounts, class data, and announcements.</li>
-    <li><strong>Resend</strong> — email delivery. Receives teacher email address and OTP code for verification.</li>
+    <li><strong>Supabase</strong> — database, authentication, and backend hosting. Stores teacher accounts, class data, and announcements.</li>
     <li><strong>Expo Push Notifications</strong> — push notification delivery. Receives device push tokens and notification content.</li>
     <li><strong>HiveMQ</strong> — real-time messaging. Receives announcement content in transit via MQTT protocol.</li>
     <li><strong>Groq</strong> — AI classification. Receives announcement title and message text to automatically assign a category. No data is stored by Groq.</li>
@@ -95,11 +94,26 @@
   <h2>4. Data Retention</h2>
   <ul>
     <li>Announcements expire automatically after 7 days.</li>
-    <li>Teacher accounts and class data are retained until manually deleted.</li>
+    <li>Teacher accounts and all associated class data are retained until the account is deleted.</li>
     <li>Students can leave a class at any time, which removes their device ID and push token from our records.</li>
   </ul>
 
-  <h2>5. Children's Privacy</h2>
+  <h2>5. Account Deletion</h2>
+  <p>
+    Teachers can permanently delete their account directly within the app:
+  </p>
+  <ul>
+    <li>Go to <strong>Preferences → Delete Account</strong> and confirm with your password.</li>
+    <li>Deletion is immediate and permanent. The following data is removed: your teacher account, all classes you created, all announcements, all student membership records, and all push tokens associated with your class.</li>
+    <li>This action cannot be undone.</li>
+  </ul>
+  <p>
+    Alternatively, you may request account deletion by emailing us at
+    <a href="mailto:officialchalqapp@gmail.com">officialchalqapp@gmail.com</a>.
+    We will process email deletion requests within 7 days.
+  </p>
+
+  <h2>6. Children's Privacy</h2>
   <p>
     Chalq is intended for use in educational settings under teacher supervision.
     The app is designed for users aged 13 and above. We do not knowingly collect
@@ -107,23 +121,27 @@
     has used the app, please contact us so we can remove their data.
   </p>
 
-  <h2>6. Data Security</h2>
+  <h2>7. Data Security</h2>
   <p>
-    Passwords are hashed before storage and never stored in plain text.
+    Authentication is handled by Supabase Auth using industry-standard security practices.
     Student data is limited to device identifiers only — no names or emails are collected from students.
     All data is transmitted over encrypted connections (HTTPS/WSS).
   </p>
 
-  <h2>7. Your Rights</h2>
-  <p>You may request deletion of your account and all associated data by emailing us at <a href="mailto:acostacharles34@gmail.com">codewithphyl@gmail.com</a>. We will process deletion requests within 7 days.</p>
+  <h2>8. Your Rights</h2>
+  <p>
+    Teachers can delete their account and all associated data at any time from within the app.
+    For any other data requests or concerns, contact us at
+    <a href="mailto:officialchalqapp@gmail.com">officialchalqapp@gmail.com</a>.
+  </p>
 
-  <h2>8. Changes to This Policy</h2>
+  <h2>9. Changes to This Policy</h2>
   <p>We may update this policy from time to time. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
 
-  <h2>9. Contact</h2>
+  <h2>10. Contact</h2>
   <p>
     If you have any questions about this privacy policy, contact us at:<br />
-    <a href="mailto:acostacharles34@gmail.com">codewithphyl@gmail.com</a>
+    <a href="mailto:officialchalqapp@gmail.com">officialchalqapp@gmail.com</a>
   </p>
 
   <div class="footer">
